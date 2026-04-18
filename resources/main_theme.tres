@@ -2,6 +2,14 @@
 
 [ext_resource type="FontFile" uid="uid://dh5y8huugb5rr" path="res://fonts/Kurale/Kurale-Regular.ttf" id="1_ols5k"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ols5k"]
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [resource]
 default_font = ExtResource("1_ols5k")
 default_font_size = 10
+Keyboard/base_type = &"PanelContainer"
+Keyboard/styles/panel = SubResource("StyleBoxFlat_ols5k")

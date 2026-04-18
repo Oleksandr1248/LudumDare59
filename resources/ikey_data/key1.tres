@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DefaultKey" format=3 uid="uid://dmbqcciitcbmy"]
+
+[ext_resource type="Script" uid="uid://b13epbgq56vyy" path="res://scripts/resources/ikey_data/default_key.gd" id="1_di1pu"]
+[ext_resource type="Resource" uid="uid://cabdhpb5v5v21" path="res://resources/slots_data/giraf.tres" id="1_re8vo"]
+
+[resource]
+script = ExtResource("1_di1pu")
+data = ExtResource("1_re8vo")
+metadata/_custom_type_script = "uid://b13epbgq56vyy"

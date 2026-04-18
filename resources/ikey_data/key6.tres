@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DefaultKey" format=3 uid="uid://dprynduar5sj7"]
+
+[ext_resource type="Resource" uid="uid://oygt5iwmg5cu" path="res://resources/slots_data/tigr.tres" id="1_8p7my"]
+[ext_resource type="Script" uid="uid://b13epbgq56vyy" path="res://scripts/resources/ikey_data/default_key.gd" id="2_jcwwm"]
+
+[resource]
+script = ExtResource("2_jcwwm")
+data = ExtResource("1_8p7my")
+metadata/_custom_type_script = "uid://b13epbgq56vyy"

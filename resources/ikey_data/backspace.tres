@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackSpace" format=3 uid="uid://bx7inr1leik0l"]
+
+[ext_resource type="Script" uid="uid://b1r0faivlet4l" path="res://scripts/resources/ikey_data/backspace.gd" id="1_igtqc"]
+
+[sub_resource type="Gradient" id="Gradient_igtqc"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4pohj"]
+gradient = SubResource("Gradient_igtqc")
+width = 32
+height = 32
+
+[resource]
+script = ExtResource("1_igtqc")
+key_texture = SubResource("GradientTexture2D_4pohj")
+metadata/_custom_type_script = "uid://b1r0faivlet4l"

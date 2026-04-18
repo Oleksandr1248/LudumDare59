@@ -1,3 +1,171 @@
 [gd_scene format=3 uid="uid://b088wn6hyb841"]
 
+[ext_resource type="Texture2D" uid="uid://iubnb681qyos" path="res://assets/sprites/BackgroundLD59.png" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://3ugwhpw7qkgg" path="res://assets/sprites/WindowLD59.png" id="2_iywne"]
+[ext_resource type="Texture2D" uid="uid://c1t66m2p2gbes" path="res://assets/sprites/ForestLD59.png" id="3_p57ef"]
+[ext_resource type="Texture2D" uid="uid://b1l6alwbmplny" path="res://assets/sprites/ComputerLD59.png" id="4_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dxuupx85b7qad" path="res://prefabs/ui/computer_slot.tscn" id="5_iywne"]
+[ext_resource type="Script" uid="uid://dm71k0axlptsb" path="res://scenes/computer.gd" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://clt5ui0thec30" path="res://prefabs/ui/keycap.tscn" id="7_u5sy4"]
+[ext_resource type="Resource" uid="uid://dmbqcciitcbmy" path="res://resources/ikey_data/key1.tres" id="8_0tnpc"]
+[ext_resource type="Resource" uid="uid://bx7inr1leik0l" path="res://resources/ikey_data/backspace.tres" id="9_kvpfn"]
+[ext_resource type="Resource" uid="uid://odtfnftohhxq" path="res://resources/ikey_data/key2.tres" id="9_trtic"]
+[ext_resource type="Resource" uid="uid://cnrkfml8a7bhu" path="res://resources/ikey_data/enter.tres" id="9_vtaks"]
+[ext_resource type="Resource" uid="uid://7accxser75i3" path="res://resources/ikey_data/key3.tres" id="10_ir15t"]
+[ext_resource type="Resource" uid="uid://cyytt8ylndcij" path="res://resources/ikey_data/key4.tres" id="11_ca42v"]
+[ext_resource type="Resource" uid="uid://d13qfhgheahet" path="res://resources/ikey_data/key5.tres" id="12_ir15t"]
+[ext_resource type="Resource" uid="uid://dprynduar5sj7" path="res://resources/ikey_data/key6.tres" id="12_rysoc"]
+
 [node name="Game" type="Node2D" unique_id=1823882586]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=179034675]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=74992223]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lbhrr")
+stretch_mode = 3
+
+[node name="Window" type="TextureRect" parent="CanvasLayer" unique_id=1251286886]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 22.0
+offset_top = -147.0
+offset_right = 301.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iywne")
+stretch_mode = 3
+
+[node name="Forest" type="TextureRect" parent="CanvasLayer/Window" unique_id=1857092549]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_p57ef")
+stretch_mode = 3
+
+[node name="Computer" type="TextureRect" parent="CanvasLayer" unique_id=915745945]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.0
+offset_top = -54.0
+offset_right = -41.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_u5sy4")
+stretch_mode = 3
+script = ExtResource("5_p57ef")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Computer" unique_id=1984845385]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 6
+
+[node name="ComputerSlot" parent="CanvasLayer/Computer/GridContainer" unique_id=378898145 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot2" parent="CanvasLayer/Computer/GridContainer" unique_id=129530099 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot3" parent="CanvasLayer/Computer/GridContainer" unique_id=2064128454 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot4" parent="CanvasLayer/Computer/GridContainer" unique_id=1858700991 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot5" parent="CanvasLayer/Computer/GridContainer" unique_id=1149340292 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot6" parent="CanvasLayer/Computer/GridContainer" unique_id=1474438518 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot7" parent="CanvasLayer/Computer/GridContainer" unique_id=1922212546 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot8" parent="CanvasLayer/Computer/GridContainer" unique_id=2116571663 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot9" parent="CanvasLayer/Computer/GridContainer" unique_id=1149494931 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot10" parent="CanvasLayer/Computer/GridContainer" unique_id=437089049 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot11" parent="CanvasLayer/Computer/GridContainer" unique_id=825093023 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="ComputerSlot12" parent="CanvasLayer/Computer/GridContainer" unique_id=1773189282 instance=ExtResource("5_iywne")]
+layout_mode = 2
+
+[node name="KeyBoard" type="PanelContainer" parent="CanvasLayer" unique_id=1013224121]
+offset_left = 24.0
+offset_top = 277.0
+offset_right = 436.0
+offset_bottom = 325.0
+theme_type_variation = &"Keyboard"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/KeyBoard" unique_id=1509500660]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="DefaultKeyContainer" type="HBoxContainer" parent="CanvasLayer/KeyBoard/HBoxContainer" unique_id=253166011]
+layout_mode = 2
+
+[node name="Keycap" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=910165191 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("8_0tnpc")
+
+[node name="Keycap2" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=106637971 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("9_trtic")
+
+[node name="Keycap3" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=494351436 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("10_ir15t")
+
+[node name="Keycap4" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=1311179952 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("11_ca42v")
+
+[node name="Keycap5" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=1294122297 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("12_ir15t")
+
+[node name="Keycap6" parent="CanvasLayer/KeyBoard/HBoxContainer/DefaultKeyContainer" unique_id=620294480 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("12_rysoc")
+
+[node name="SpecialKeyContainer" type="HBoxContainer" parent="CanvasLayer/KeyBoard/HBoxContainer" unique_id=1050623642]
+layout_mode = 2
+
+[node name="KeycapBackspace" parent="CanvasLayer/KeyBoard/HBoxContainer/SpecialKeyContainer" unique_id=636444872 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("9_kvpfn")
+
+[node name="KeycapEnter" parent="CanvasLayer/KeyBoard/HBoxContainer/SpecialKeyContainer" unique_id=88622059 instance=ExtResource("7_u5sy4")]
+layout_mode = 2
+data = ExtResource("9_vtaks")

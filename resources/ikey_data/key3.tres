@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DefaultKey" format=3 uid="uid://7accxser75i3"]
+
+[ext_resource type="Resource" uid="uid://cgduvvph25vbq" path="res://resources/slots_data/olenb.tres" id="1_sbg3c"]
+[ext_resource type="Script" uid="uid://b13epbgq56vyy" path="res://scripts/resources/ikey_data/default_key.gd" id="2_gjy36"]
+
+[resource]
+script = ExtResource("2_gjy36")
+data = ExtResource("1_sbg3c")
+metadata/_custom_type_script = "uid://b13epbgq56vyy"

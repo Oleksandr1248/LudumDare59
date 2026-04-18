@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DefaultKey" format=3 uid="uid://d13qfhgheahet"]
+
+[ext_resource type="Resource" uid="uid://b074vdpyraaed" path="res://resources/slots_data/slon.tres" id="1_oext0"]
+[ext_resource type="Script" uid="uid://b13epbgq56vyy" path="res://scripts/resources/ikey_data/default_key.gd" id="2_n1xcf"]
+
+[resource]
+script = ExtResource("2_n1xcf")
+data = ExtResource("1_oext0")
+metadata/_custom_type_script = "uid://b13epbgq56vyy"
