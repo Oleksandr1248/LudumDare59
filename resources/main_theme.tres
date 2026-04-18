@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://bgt0gidcd170q"]
+
+[ext_resource type="FontFile" uid="uid://dh5y8huugb5rr" path="res://fonts/Kurale/Kurale-Regular.ttf" id="1_ols5k"]
+
+[resource]
+default_font = ExtResource("1_ols5k")
+default_font_size = 10
