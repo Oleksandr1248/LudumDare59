@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Bonfire" format=3 uid="uid://ynauas8qmql3"]
+
+[ext_resource type="Script" uid="uid://d1o0v45jvklar" path="res://scripts/resources/itask_data/bonfire.gd" id="1_fksos"]
+
+[sub_resource type="Gradient" id="Gradient_fksos"]
+colors = PackedColorArray(0.55426085, 0.26206914, 0, 1, 1, 0.6767616, 0.4758457, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b4iy8"]
+gradient = SubResource("Gradient_fksos")
+width = 80
+height = 24
+
+[resource]
+script = ExtResource("1_fksos")
+texture = SubResource("GradientTexture2D_b4iy8")
+metadata/_custom_type_script = "uid://d1o0v45jvklar"

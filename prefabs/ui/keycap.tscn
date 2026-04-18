@@ -11,7 +11,7 @@ width = 48
 height = 48
 
 [sub_resource type="Gradient" id="Gradient_sjuts"]
-colors = PackedColorArray(0, 1, 0, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0, 1, 0, 1, 1, 0, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_lvd1q"]
 gradient = SubResource("Gradient_sjuts")

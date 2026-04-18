@@ -10,6 +10,6 @@ expand_margin_bottom = 8.0
 
 [resource]
 default_font = ExtResource("1_ols5k")
-default_font_size = 10
+default_font_size = 16
 Keyboard/base_type = &"PanelContainer"
 Keyboard/styles/panel = SubResource("StyleBoxFlat_ols5k")

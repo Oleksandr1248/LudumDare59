@@ -1,5 +1,5 @@
-extends Resource
-class_name SlotData
+extends ITaskData
+class_name Bonfire
 
 @export var texture: Texture2D
 

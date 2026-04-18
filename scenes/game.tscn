@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://iubnb681qyos" path="res://assets/sprites/BackgroundLD59.png" id="1_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://3ugwhpw7qkgg" path="res://assets/sprites/WindowLD59.png" id="2_iywne"]
+[ext_resource type="Script" uid="uid://ch3tglt2t4urd" path="res://scenes/bonfire.gd" id="2_rysoc"]
 [ext_resource type="Texture2D" uid="uid://c1t66m2p2gbes" path="res://assets/sprites/ForestLD59.png" id="3_p57ef"]
 [ext_resource type="Texture2D" uid="uid://b1l6alwbmplny" path="res://assets/sprites/ComputerLD59.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dxuupx85b7qad" path="res://prefabs/ui/computer_slot.tscn" id="5_iywne"]
@@ -15,19 +16,11 @@
 [ext_resource type="Resource" uid="uid://cyytt8ylndcij" path="res://resources/ikey_data/key4.tres" id="11_ca42v"]
 [ext_resource type="Resource" uid="uid://d13qfhgheahet" path="res://resources/ikey_data/key5.tres" id="12_ir15t"]
 [ext_resource type="Resource" uid="uid://dprynduar5sj7" path="res://resources/ikey_data/key6.tres" id="12_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dvxksfexk8yce" path="res://00_global/decoder_manager.tscn" id="16_ca42v"]
 
 [node name="Game" type="Node2D" unique_id=1823882586]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=179034675]
-
-[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=74992223]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_lbhrr")
-stretch_mode = 3
 
 [node name="Window" type="TextureRect" parent="CanvasLayer" unique_id=1251286886]
 anchors_preset = 8
@@ -35,14 +28,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 22.0
-offset_top = -147.0
-offset_right = 301.0
-offset_bottom = 45.0
+offset_left = 33.0
+offset_top = -159.0
+offset_right = 303.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_iywne")
 stretch_mode = 3
+
+[node name="Bonfire" type="Control" parent="CanvasLayer/Window" unique_id=1848055457]
+anchors_preset = 0
+offset_left = 159.0
+offset_top = 173.0
+offset_right = 159.0
+offset_bottom = 173.0
+script = ExtResource("2_rysoc")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Window/Bonfire" unique_id=1082030730]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Window/Bonfire" unique_id=427107951]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Forest" type="TextureRect" parent="CanvasLayer/Window" unique_id=1857092549]
 layout_mode = 1
@@ -52,6 +60,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_p57ef")
+stretch_mode = 3
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=74992223]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lbhrr")
 stretch_mode = 3
 
 [node name="Computer" type="TextureRect" parent="CanvasLayer" unique_id=915745945]
@@ -169,3 +186,7 @@ data = ExtResource("9_kvpfn")
 [node name="KeycapEnter" parent="CanvasLayer/KeyBoard/HBoxContainer/SpecialKeyContainer" unique_id=88622059 instance=ExtResource("7_u5sy4")]
 layout_mode = 2
 data = ExtResource("9_vtaks")
+
+[node name="DecoderManager" parent="CanvasLayer" unique_id=1605859233 instance=ExtResource("16_ca42v")]
+offset_top = 360.0
+offset_bottom = 360.0

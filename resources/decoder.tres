@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Decoder" format=3 uid="uid://dqc6pj1w2ufb8"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_pcphv"]
+[ext_resource type="Script" uid="uid://deb63eoodmp3i" path="res://scripts/resources/slot_data/slot_data.gd" id="2_u0175"]
+[ext_resource type="Resource" uid="uid://cjnvisj1d5en3" path="res://resources/itask_data/bonfire/blin.tres" id="3_0mhrk"]
+[ext_resource type="Script" uid="uid://fdqpo7ip4hge" path="res://scripts/resources/decoder.gd" id="3_41u8w"]
+[ext_resource type="Resource" uid="uid://cocda2ucs82i1" path="res://resources/slots_data/kot.tres" id="4_ds6ow"]
+[ext_resource type="Resource" uid="uid://bp6khrmsle8ec" path="res://resources/itask_data/bonfire/pes.tres" id="5_7ya6d"]
+[ext_resource type="Resource" uid="uid://cm217m8g6egn5" path="res://resources/slots_data/pes.tres" id="6_fsy4g"]
+[ext_resource type="Resource" uid="uid://ynauas8qmql3" path="res://resources/itask_data/bonfire/cube.tres" id="7_vxd62"]
+[ext_resource type="Resource" uid="uid://cgduvvph25vbq" path="res://resources/slots_data/olenb.tres" id="8_m46qx"]
+[ext_resource type="Resource" uid="uid://cqn6ooo06c3fy" path="res://resources/itask_data/bonfire/krug.tres" id="9_sr6l2"]
+[ext_resource type="Resource" uid="uid://b074vdpyraaed" path="res://resources/slots_data/slon.tres" id="10_0nsg8"]
+[ext_resource type="Resource" uid="uid://ceuw3kv82uofu" path="res://resources/itask_data/bonfire/line.tres" id="11_xpmdd"]
+[ext_resource type="Resource" uid="uid://cabdhpb5v5v21" path="res://resources/slots_data/giraf.tres" id="12_a0t3m"]
+[ext_resource type="Resource" uid="uid://c6tislnjugir" path="res://resources/itask_data/bonfire/sword.tres" id="13_02myk"]
+[ext_resource type="Resource" uid="uid://oygt5iwmg5cu" path="res://resources/slots_data/tigr.tres" id="14_dv1fj"]
+[ext_resource type="Resource" uid="uid://21ljfyrr8flt" path="res://resources/itask_data/color_light/red.tres" id="15_ds6ow"]
+
+[resource]
+script = ExtResource("3_41u8w")
+decoder_list = Dictionary[ExtResource("1_pcphv"), ExtResource("2_u0175")]({
+ExtResource("3_0mhrk"): ExtResource("4_ds6ow"),
+ExtResource("5_7ya6d"): ExtResource("6_fsy4g"),
+ExtResource("7_vxd62"): ExtResource("8_m46qx"),
+ExtResource("9_sr6l2"): ExtResource("10_0nsg8"),
+ExtResource("11_xpmdd"): ExtResource("12_a0t3m"),
+ExtResource("13_02myk"): ExtResource("14_dv1fj"),
+ExtResource("15_ds6ow"): ExtResource("8_m46qx")
+})
+metadata/_custom_type_script = "uid://fdqpo7ip4hge"

@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dvxksfexk8yce"]
+
+[ext_resource type="Script" uid="uid://0bw2ldd451ll" path="res://00_global/decoder_manager.gd" id="1_yuik6"]
+[ext_resource type="Resource" uid="uid://dqc6pj1w2ufb8" path="res://resources/decoder.tres" id="2_7xx6b"]
+
+[node name="DecoderManager" type="Control" unique_id=968561213]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yuik6")
+decoder = ExtResource("2_7xx6b")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1919002142]
+custom_minimum_size = Vector2(580, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -150.0
+offset_right = 290.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BonfireGrid" type="GridContainer" parent="PanelContainer" unique_id=2108563204]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 200
+columns = 2
+
+[node name="ColorLightGrid" type="GridContainer" parent="PanelContainer" unique_id=1725736768]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 200
+columns = 2
+
+[node name="ToggleButton" type="Button" parent="PanelContainer" unique_id=1282946248]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+toggle_mode = true
+text = "Toggle"
