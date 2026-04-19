@@ -19,4 +19,6 @@ signal task_list_complete()
 signal all_day_completed()
 signal game_overed()
 
+signal show_tutor(idx: int)
+
 @warning_ignore_restore("unused_signal")

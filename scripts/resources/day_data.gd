@@ -24,3 +24,4 @@ func start() -> void:
 		OnStart.RAIN_AND_COLOR:
 			SignalBus.rain_started.emit()
 			SignalBus.color_lighter_added.emit()
+			SignalBus.show_tutor.emit(1)

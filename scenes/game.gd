@@ -11,7 +11,12 @@ class_name Game
 @onready var audio_forest: AudioStreamPlayer = $AudioForest
 @onready var audio_rain: AudioStreamPlayer = $AudioRain
 
+@onready var tutor: Button = %Tutor
+@onready var tutor_text_1: RichTextLabel = %Tutor_text1
+@onready var tutor_text_2: RichTextLabel = %Tutor_text2
+
 var _tween: Tween
+var tttt := -1
 
 func _init() -> void:
 	G.game = self
@@ -25,6 +30,14 @@ func _ready() -> void:
 	SignalBus.rain_started.connect(rain_toggled.bind(true))
 	SignalBus.rain_ended.connect(rain_toggled.bind(false))
 	mute_button.toggled.connect(G.mute)
+	
+	SignalBus.show_tutor.connect(_on_show_tutor)
+	tutor.pressed.connect(func () -> void:
+		tutor.hide()
+		if tttt == 0:
+			SignalBus.day_init.emit(0))
+	
+	_on_show_tutor(0)
 
 func tween_panel() -> void:
 	text_label.text = "DAY %d" % (DayManager.idx + 1)
@@ -57,3 +70,14 @@ func rain_toggled(toggle: bool) -> void:
 	else:
 		audio_rain.stop()
 		audio_forest.play()
+
+func _on_show_tutor(idx: int) -> void:
+	tttt = idx
+	if idx == 0:
+		tutor.show()
+		tutor_text_1.show()
+		tutor_text_2.hide()
+	else:
+		tutor.show()
+		tutor_text_2.show()
+		tutor_text_1.hide()

@@ -13,7 +13,7 @@ func _ready() -> void:
 	SignalBus.game_overed.emit(_on_game_overed)
 	if not game.is_node_ready():
 		await game.ready
-	SignalBus.day_init.emit(0)
+	#SignalBus.day_init.emit(0)
 
 func _input(event: InputEvent) -> void:
 	if day_is_started:

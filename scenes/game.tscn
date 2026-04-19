@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://d4a5wf52sm0wb" path="res://assets/sprites/unmute.png" id="20_bt5mj"]
 [ext_resource type="AudioStream" uid="uid://cmr0raddypmk3" path="res://assets/sounds/error.mp3" id="21_37s47"]
 [ext_resource type="Texture2D" uid="uid://bwnvxsmxu18sk" path="res://assets/sprites/mute.png" id="21_e1j6l"]
+[ext_resource type="Texture2D" uid="uid://x1yx8kslw3t1" path="res://assets/sprites/BGT.png" id="22_sww3w"]
 [ext_resource type="AudioStream" uid="uid://55rqh427djpt" path="res://assets/sounds/forest.mp3" id="26_qnb83"]
 [ext_resource type="AudioStream" uid="uid://blw3eafk4vytk" path="res://assets/sounds/rain.mp3" id="27_sww3w"]
 
@@ -39,6 +40,19 @@ fill_from = Vector2(0.5, 0.5)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bt5mj"]
 texture = SubResource("GradientTexture2D_37s47")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnb83"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sww3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_suyxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sgl2t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qouja"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_suyxu"]
+texture = ExtResource("22_sww3w")
 
 [node name="Game" type="Node2D" unique_id=1823882586]
 script = ExtResource("1_ssvqc")
@@ -239,6 +253,79 @@ data = ExtResource("9_vtaks")
 offset_top = 360.0
 offset_bottom = 360.0
 
+[node name="Vinet" type="Panel" parent="CanvasLayer" unique_id=1782450946]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bt5mj")
+
+[node name="VinetTimer" type="Timer" parent="CanvasLayer/Vinet" unique_id=286909763]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[node name="Tutor" type="Button" parent="CanvasLayer" unique_id=1152019863]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qnb83")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sww3w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_suyxu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_sgl2t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qouja")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Tutor" unique_id=2144262408]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 463.0
+offset_bottom = 272.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_suyxu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Tutor/PanelContainer" unique_id=107512606]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+
+[node name="Tutor_text1" type="RichTextLabel" parent="CanvasLayer/Tutor/PanelContainer/VBoxContainer" unique_id=1914009074]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+bbcode_enabled = true
+text = "Hey, I see you're new. Don't worry, your task is very simple. You'll see smoke from a signal fire in the [color=#f00]window[/color]. You need to transfer it to the computer using this keyboard (the first six keys contain the characters you need to enter, then Backspace to delete and Enter to enter). You also need to read the hints.
+[color=#f00](press E to see the hints)[/color]
+That's it, good luck."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutor_text2" type="RichTextLabel" parent="CanvasLayer/Tutor/PanelContainer/VBoxContainer" unique_id=752021562]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+bbcode_enabled = true
+text = "The fire went out because of the rain, but we have a solution. See that [color=#f00]thing[/color] on the right? Now keep an eye on it. By the way, your [color=#f00]hints has been updated[/color] so you understand what each color means."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Tutor/PanelContainer/VBoxContainer" unique_id=877132625]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 12
+text = "Click to continue ..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="DayPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1001344976]
 unique_name_in_owner = true
 anchors_preset = 15
@@ -257,21 +344,6 @@ theme_override_font_sizes/font_size = 40
 text = "DAY 1"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Vinet" type="Panel" parent="CanvasLayer" unique_id=1782450946]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_bt5mj")
-
-[node name="VinetTimer" type="Timer" parent="CanvasLayer/Vinet" unique_id=286909763]
-unique_name_in_owner = true
-wait_time = 0.2
-one_shot = true
 
 [node name="MuteButton" type="TextureButton" parent="CanvasLayer" unique_id=1195003407]
 unique_name_in_owner = true
