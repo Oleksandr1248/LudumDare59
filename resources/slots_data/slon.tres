@@ -1,16 +1,9 @@
 [gd_resource type="Resource" script_class="SlotData" format=3 uid="uid://b074vdpyraaed"]
 
 [ext_resource type="Script" uid="uid://deb63eoodmp3i" path="res://scripts/resources/slot_data/slot_data.gd" id="1_xhlbp"]
-
-[sub_resource type="Gradient" id="Gradient_r0ahe"]
-colors = PackedColorArray(0.42352942, 0.94509804, 0, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_xhlbp"]
-gradient = SubResource("Gradient_r0ahe")
-width = 32
-height = 32
+[ext_resource type="Texture2D" uid="uid://b12x7qn5ksopy" path="res://assets/sprites/slots/slon.png" id="2_e2d53"]
 
 [resource]
 script = ExtResource("1_xhlbp")
-texture = SubResource("GradientTexture2D_xhlbp")
+texture = ExtResource("2_e2d53")
 metadata/_custom_type_script = "uid://deb63eoodmp3i"

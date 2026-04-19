@@ -1,16 +1,9 @@
 [gd_resource type="Resource" script_class="Bonfire" format=3 uid="uid://cqn6ooo06c3fy"]
 
 [ext_resource type="Script" uid="uid://d1o0v45jvklar" path="res://scripts/resources/itask_data/bonfire.gd" id="1_86tol"]
-
-[sub_resource type="Gradient" id="Gradient_86tol"]
-colors = PackedColorArray(0.42352942, 0.94509804, 0, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_0eycf"]
-gradient = SubResource("Gradient_86tol")
-width = 80
-height = 24
+[ext_resource type="Texture2D" uid="uid://clg12da4mo4gr" path="res://assets/sprites/smokes/krug.png" id="2_0eycf"]
 
 [resource]
 script = ExtResource("1_86tol")
-texture = SubResource("GradientTexture2D_0eycf")
+texture = ExtResource("2_0eycf")
 metadata/_custom_type_script = "uid://d1o0v45jvklar"

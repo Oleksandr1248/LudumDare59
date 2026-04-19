@@ -1,7 +1,7 @@
 extends TextureRect
 class_name Computer
 
-@onready var grid: GridContainer = $GridContainer
+@onready var grid: GridContainer = %SlotsGridContainer
 
 var slots: Array[ComputerSlot] = []
 var slots_data: Array[SlotData] = []

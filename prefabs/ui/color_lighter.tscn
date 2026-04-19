@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://ht5pw6gpefn8"]
 
+[ext_resource type="Texture2D" uid="uid://bymut0j0g8ivj" path="res://assets/sprites/ColorLighterLD59.png" id="1_d56xp"]
 [ext_resource type="Script" uid="uid://do8ex5wpwlyri" path="res://prefabs/ui/color_lighter.gd" id="1_x28ax"]
-
-[sub_resource type="Gradient" id="Gradient_u20vm"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_x28ax"]
-gradient = SubResource("Gradient_u20vm")
+[ext_resource type="Texture2D" uid="uid://cbgkvyv2d0ddm" path="res://assets/sprites/krug.png" id="3_7nfad"]
 
 [node name="ColorLighter" type="TextureRect" unique_id=1481068080]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = SubResource("GradientTexture2D_x28ax")
+texture = ExtResource("1_d56xp")
+stretch_mode = 3
 script = ExtResource("1_x28ax")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=2142871242]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1577581504]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+offset_left = 9.0
+offset_top = 7.0
+offset_right = 39.0
+offset_bottom = 37.0
+texture = ExtResource("3_7nfad")
+stretch_mode = 3
 
 [node name="Interval" type="Timer" parent="." unique_id=1863334398]
 one_shot = true

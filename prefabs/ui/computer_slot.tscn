@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dedodqnmwf6i6" path="res://prefabs/ui/computer_slot.gd" id="1_plo2o"]
 
 [sub_resource type="Gradient" id="Gradient_x55is"]
+colors = PackedColorArray(1, 0, 0, 1, 0, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_plo2o"]
 gradient = SubResource("Gradient_x55is")

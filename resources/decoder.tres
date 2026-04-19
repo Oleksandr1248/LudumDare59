@@ -16,6 +16,11 @@
 [ext_resource type="Resource" uid="uid://c6tislnjugir" path="res://resources/itask_data/bonfire/sword.tres" id="13_02myk"]
 [ext_resource type="Resource" uid="uid://oygt5iwmg5cu" path="res://resources/slots_data/tigr.tres" id="14_dv1fj"]
 [ext_resource type="Resource" uid="uid://21ljfyrr8flt" path="res://resources/itask_data/color_light/red.tres" id="15_ds6ow"]
+[ext_resource type="Resource" uid="uid://ny42buh8mmoo" path="res://resources/itask_data/color_light/blue.tres" id="16_sr6l2"]
+[ext_resource type="Resource" uid="uid://c840mdng02y15" path="res://resources/itask_data/color_light/green.tres" id="17_0nsg8"]
+[ext_resource type="Resource" uid="uid://irbp8ggjtu26" path="res://resources/itask_data/color_light/purple.tres" id="18_xpmdd"]
+[ext_resource type="Resource" uid="uid://b5u8mssdxdavi" path="res://resources/itask_data/color_light/pink.tres" id="19_a0t3m"]
+[ext_resource type="Resource" uid="uid://2ne7xec4ewhk" path="res://resources/itask_data/color_light/white.tres" id="20_02myk"]
 
 [resource]
 script = ExtResource("3_41u8w")
@@ -26,6 +31,11 @@ ExtResource("7_vxd62"): ExtResource("8_m46qx"),
 ExtResource("9_sr6l2"): ExtResource("10_0nsg8"),
 ExtResource("11_xpmdd"): ExtResource("12_a0t3m"),
 ExtResource("13_02myk"): ExtResource("14_dv1fj"),
-ExtResource("15_ds6ow"): ExtResource("8_m46qx")
+ExtResource("15_ds6ow"): ExtResource("4_ds6ow"),
+ExtResource("16_sr6l2"): ExtResource("6_fsy4g"),
+ExtResource("17_0nsg8"): ExtResource("8_m46qx"),
+ExtResource("18_xpmdd"): ExtResource("10_0nsg8"),
+ExtResource("19_a0t3m"): ExtResource("12_a0t3m"),
+ExtResource("20_02myk"): ExtResource("14_dv1fj")
 })
 metadata/_custom_type_script = "uid://fdqpo7ip4hge"

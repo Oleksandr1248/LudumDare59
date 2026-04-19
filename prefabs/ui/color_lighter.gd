@@ -4,7 +4,7 @@ class_name ColorLighter
 @export var beam: float = .3
 
 @onready var interval: Timer = $Interval
-@onready var color_rect: ColorRect = $ColorRect
+@onready var color_rect: TextureRect = $ColorRect
 
 var dict: Dictionary[int, Array]
 
@@ -28,13 +28,12 @@ func try_to_start(idx: int) -> void:
 		start(dict[idx])
 
 func start(array: Array[Color]) -> void:
-	color_rect.show()
 	for c in array:
-		color_rect.color = c
+		color_rect.self_modulate = c
 		interval.start(beam)
 		await interval.timeout
 	SignalBus.task_completed.emit()
-	color_rect.hide()
+	color_rect.self_modulate = Color.BLACK
 
 func clear() -> void:
 	dict.clear()

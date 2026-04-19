@@ -1,16 +1,9 @@
 [gd_resource type="Resource" script_class="Enter" format=3 uid="uid://cnrkfml8a7bhu"]
 
+[ext_resource type="Texture2D" uid="uid://jbgcbp85auhs" path="res://assets/sprites/keycap/1.png" id="1_dq4tw"]
 [ext_resource type="Script" uid="uid://ior5jlfgygi6" path="res://scripts/resources/ikey_data/enter.gd" id="1_qbk83"]
-
-[sub_resource type="Gradient" id="Gradient_qbk83"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dq4tw"]
-gradient = SubResource("Gradient_qbk83")
-width = 32
-height = 32
 
 [resource]
 script = ExtResource("1_qbk83")
-key_texture = SubResource("GradientTexture2D_dq4tw")
+key_texture = ExtResource("1_dq4tw")
 metadata/_custom_type_script = "uid://ior5jlfgygi6"

@@ -2,6 +2,55 @@
 
 [ext_resource type="Script" uid="uid://0bw2ldd451ll" path="res://00_global/decoder_manager.gd" id="1_yuik6"]
 [ext_resource type="Resource" uid="uid://dqc6pj1w2ufb8" path="res://resources/decoder.tres" id="2_7xx6b"]
+[ext_resource type="Texture2D" uid="uid://ntflx568v46n" path="res://assets/sprites/DMBack.png" id="3_imw87"]
+[ext_resource type="Texture2D" uid="uid://bpbcd57rhjkb8" path="res://assets/sprites/button/0.png" id="4_6yvpx"]
+[ext_resource type="Texture2D" uid="uid://56mpbtvqlump" path="res://assets/sprites/button/1.png" id="5_1gchd"]
+[ext_resource type="Texture2D" uid="uid://drf8iptbopdc4" path="res://assets/sprites/button/2.png" id="6_vchfe"]
+[ext_resource type="Texture2D" uid="uid://budbod411mq8h" path="res://assets/sprites/button/p0.png" id="7_f4nv1"]
+[ext_resource type="Texture2D" uid="uid://rnk04x0gtb58" path="res://assets/sprites/button/p1.png" id="8_d8p0v"]
+[ext_resource type="Texture2D" uid="uid://n2d44tgisegw" path="res://assets/sprites/button/p2.png" id="9_yp7p7"]
+[ext_resource type="Texture2D" uid="uid://6d4icoapej4x" path="res://assets/sprites/button/h0.png" id="10_g58wx"]
+[ext_resource type="Texture2D" uid="uid://cydwwuhisribk" path="res://assets/sprites/button/h1.png" id="11_nkpa5"]
+[ext_resource type="Texture2D" uid="uid://vrcjm1twm6hu" path="res://assets/sprites/button/h2.png" id="12_rsue1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g16h"]
+texture = ExtResource("3_imw87")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_lqluo"]
+frames = 3
+frame_0/texture = ExtResource("4_6yvpx")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("5_1gchd")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("6_vchfe")
+frame_2/duration = 0.5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtovh"]
+texture = SubResource("AnimatedTexture_lqluo")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_n0580"]
+frames = 3
+frame_0/texture = ExtResource("7_f4nv1")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("8_d8p0v")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("9_yp7p7")
+frame_2/duration = 0.5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r53pl"]
+texture = SubResource("AnimatedTexture_n0580")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dems8"]
+frames = 3
+frame_0/texture = ExtResource("10_g58wx")
+frame_0/duration = 0.5
+frame_1/texture = ExtResource("11_nkpa5")
+frame_1/duration = 0.5
+frame_2/texture = ExtResource("12_rsue1")
+frame_2/duration = 0.5
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_br5iu"]
+texture = SubResource("AnimatedTexture_dems8")
 
 [node name="DecoderManager" type="Control" unique_id=968561213]
 layout_mode = 3
@@ -10,11 +59,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_yuik6")
 decoder = ExtResource("2_7xx6b")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1919002142]
-custom_minimum_size = Vector2(580, 300)
+custom_minimum_size = Vector2(300, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -23,17 +73,19 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -290.0
 offset_top = -150.0
-offset_right = 290.0
+offset_right = 10.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1g16h")
 
 [node name="BonfireGrid" type="GridContainer" parent="PanelContainer" unique_id=2108563204]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/h_separation = 200
+theme_override_constants/h_separation = 70
+theme_override_constants/v_separation = 10
 columns = 2
 
 [node name="ColorLightGrid" type="GridContainer" parent="PanelContainer" unique_id=1725736768]
@@ -42,13 +94,25 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/h_separation = 200
+theme_override_constants/h_separation = 119
+theme_override_constants/v_separation = 10
 columns = 2
 
-[node name="ToggleButton" type="Button" parent="PanelContainer" unique_id=1282946248]
+[node name="ToggleButton" type="Button" parent="." unique_id=1282946248]
 unique_name_in_owner = true
-layout_mode = 2
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 0
+offset_left = 329.0
+offset_top = 35.0
+offset_right = 383.0
+offset_bottom = 68.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_styles/normal = SubResource("StyleBoxTexture_gtovh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r53pl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_br5iu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_br5iu")
 toggle_mode = true
 text = "Toggle"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ColorLight" format=3 uid="uid://irbp8ggjtu26"]
+
+[ext_resource type="Script" uid="uid://bxnowhs0e7dku" path="res://scripts/resources/itask_data/color_light.gd" id="1_5inwf"]
+
+[resource]
+script = ExtResource("1_5inwf")
+color = Color(0.5803922, 0, 1, 1)
+type = 1
+metadata/_custom_type_script = "uid://bxnowhs0e7dku"

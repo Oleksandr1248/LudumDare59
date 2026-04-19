@@ -18,9 +18,10 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if day_is_started:
 		if event.is_action_pressed("show_decoder"):
-			decoder_manager.show_window()
-		elif event.is_action_pressed("hide_decoder"):
-			decoder_manager.hide_window()
+			#decoder_manager.show_window()
+			decoder_manager.vision_change()
+		#elif event.is_action_pressed("hide_decoder"):
+			#decoder_manager.hide_window()
 
 func computer_enter() -> void:
 	if game_over and not day_is_started: return

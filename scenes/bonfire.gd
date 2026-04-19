@@ -1,15 +1,12 @@
 extends Control
 class_name BonfireNode
 
-#signal can_started()
-
 const PUFF_Y := 24
 const SPACE := 20
 
 @onready var marker_2d: Marker2D = $Marker2D
 
 var dict: Dictionary[int, PuffsSmoke]
-#var can_delete := false
 var _tween: Tween
 
 func _init() -> void:
@@ -32,19 +29,12 @@ func register(idx: int, array: Array[ITaskData]) -> void:
 	dict[idx] = puffs
 
 func start_tween(c: PuffsSmoke) -> void:
-	print(c)
 	if _tween: _tween.kill()
 	var end_pos_y: int = floor(marker_2d.position.y - c.get_puff_size().y)
 	_tween = create_tween()
 	_tween.tween_property(c, "position:y", end_pos_y, 5)
 	await _tween.finished
 	SignalBus.task_completed.emit()
-	#print(can_delete)
-	#if can_delete:
-		#can_delete = false
-		#c.queue_free()
-		#can_started.emit()
-	#else:
 	if c:
 		c.position.y = 0
 
@@ -53,13 +43,10 @@ func clear() -> void:
 	for ch in get_children():
 		if ch is PuffsSmoke:
 				ch.queue_free()
-	#can_delete = true
 	SignalBus.can_start_task.emit()
 
 func try_to_start(idx: int) -> void:
 	if dict.has(idx):
-		#if can_delete:
-			#await can_started
 		start_tween(dict[idx])
 
 

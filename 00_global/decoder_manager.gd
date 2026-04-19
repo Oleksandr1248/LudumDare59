@@ -15,6 +15,7 @@ const END_POS := 0
 @onready var toggle_button: Button = %ToggleButton
 var decoded: Array[SlotData]
 var _tween: Tween
+var showed := false
 
 func _init() -> void:
 	G.decoder_manager = self
@@ -42,10 +43,18 @@ func compare(slot_list: Array[SlotData]) -> bool:
 	return decoded == slot_list
 
 func show_window() -> void:
+	showed = true
 	_tween_pos(END_POS)
 
 func hide_window() -> void:
+	showed = false
 	_tween_pos(START_POS)
+
+func vision_change() -> void:
+	if showed:
+		hide_window()
+	else:
+		show_window()
 
 func _tween_pos(to_y: int) -> void:
 	if _tween: _tween.kill()

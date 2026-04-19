@@ -13,7 +13,8 @@ func _ready() -> void:
 	SignalBus.day_started.connect(tween_panel)
 	SignalBus.game_overed.connect(func () -> void:
 		day_panel.position.y = 0
-		text_label.text = "GAME ENDED")
+		text_label.text = "GAME ENDED"
+		text_label.add_theme_color_override("font_color", Color(0.918, 0.618, 0.0, 1.0)))
 
 func tween_panel() -> void:
 	text_label.text = "DAY %d" % (DayManager.idx + 1)

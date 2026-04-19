@@ -77,81 +77,88 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -285.0
-offset_top = -54.0
+offset_top = -43.0
 offset_right = -41.0
-offset_bottom = 46.0
+offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_u5sy4")
 stretch_mode = 3
 script = ExtResource("5_p57ef")
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Computer" unique_id=1984845385]
+[node name="Control" type="CenterContainer" parent="CanvasLayer/Computer" unique_id=1759823367]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -106.0
+offset_top = -37.0
+offset_right = 106.0
+offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="SlotsGridContainer" type="GridContainer" parent="CanvasLayer/Computer/Control" unique_id=1984845385]
+unique_name_in_owner = true
+layout_mode = 2
 columns = 6
 
-[node name="ComputerSlot" parent="CanvasLayer/Computer/GridContainer" unique_id=378898145 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=378898145 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot2" parent="CanvasLayer/Computer/GridContainer" unique_id=129530099 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot2" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=129530099 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot3" parent="CanvasLayer/Computer/GridContainer" unique_id=2064128454 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot3" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=2064128454 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot4" parent="CanvasLayer/Computer/GridContainer" unique_id=1858700991 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot4" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1858700991 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot5" parent="CanvasLayer/Computer/GridContainer" unique_id=1149340292 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot5" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1149340292 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot6" parent="CanvasLayer/Computer/GridContainer" unique_id=1474438518 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot6" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1474438518 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot7" parent="CanvasLayer/Computer/GridContainer" unique_id=1922212546 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot7" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1922212546 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot8" parent="CanvasLayer/Computer/GridContainer" unique_id=2116571663 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot8" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=2116571663 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot9" parent="CanvasLayer/Computer/GridContainer" unique_id=1149494931 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot9" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1149494931 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot10" parent="CanvasLayer/Computer/GridContainer" unique_id=437089049 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot10" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=437089049 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot11" parent="CanvasLayer/Computer/GridContainer" unique_id=825093023 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot11" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=825093023 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
-[node name="ComputerSlot12" parent="CanvasLayer/Computer/GridContainer" unique_id=1773189282 instance=ExtResource("5_iywne")]
+[node name="ComputerSlot12" parent="CanvasLayer/Computer/Control/SlotsGridContainer" unique_id=1773189282 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
 [node name="ColorLighter" parent="CanvasLayer" unique_id=1481068080 instance=ExtResource("9_264po")]
-offset_left = 113.0
-offset_top = 27.0
-offset_right = 177.0
-offset_bottom = 91.0
+offset_left = 477.0
+offset_top = 146.0
+offset_right = 525.0
+offset_bottom = 218.0
+scale = Vector2(2, 2)
 
 [node name="KeyBoard" type="PanelContainer" parent="CanvasLayer" unique_id=1013224121]
 offset_left = 24.0
 offset_top = 277.0
-offset_right = 436.0
-offset_bottom = 325.0
+offset_right = 464.0
+offset_bottom = 341.0
 theme_type_variation = &"Keyboard"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/KeyBoard" unique_id=1509500660]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/separation = 16
 
 [node name="DefaultKeyContainer" type="HBoxContainer" parent="CanvasLayer/KeyBoard/HBoxContainer" unique_id=253166011]

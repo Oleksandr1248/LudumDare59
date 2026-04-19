@@ -1,16 +1,9 @@
 [gd_resource type="Resource" script_class="Bonfire" format=3 uid="uid://c6tislnjugir"]
 
 [ext_resource type="Script" uid="uid://d1o0v45jvklar" path="res://scripts/resources/itask_data/bonfire.gd" id="1_wtvho"]
-
-[sub_resource type="Gradient" id="Gradient_wtvho"]
-colors = PackedColorArray(1, 0.39607844, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_hafse"]
-gradient = SubResource("Gradient_wtvho")
-width = 80
-height = 24
+[ext_resource type="Texture2D" uid="uid://mqmyt80vstiy" path="res://assets/sprites/smokes/sword.png" id="2_hafse"]
 
 [resource]
 script = ExtResource("1_wtvho")
-texture = SubResource("GradientTexture2D_hafse")
+texture = ExtResource("2_hafse")
 metadata/_custom_type_script = "uid://d1o0v45jvklar"

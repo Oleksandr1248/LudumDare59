@@ -1,16 +1,9 @@
 [gd_resource type="Resource" script_class="Bonfire" format=3 uid="uid://ceuw3kv82uofu"]
 
 [ext_resource type="Script" uid="uid://d1o0v45jvklar" path="res://scripts/resources/itask_data/bonfire.gd" id="1_m3ajw"]
-
-[sub_resource type="Gradient" id="Gradient_m3ajw"]
-colors = PackedColorArray(0.42352942, 0.39607844, 0, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_yvq5s"]
-gradient = SubResource("Gradient_m3ajw")
-width = 80
-height = 24
+[ext_resource type="Texture2D" uid="uid://dapj3jnpj4opn" path="res://assets/sprites/smokes/line.png" id="2_yvq5s"]
 
 [resource]
 script = ExtResource("1_m3ajw")
-texture = SubResource("GradientTexture2D_yvq5s")
+texture = ExtResource("2_yvq5s")
 metadata/_custom_type_script = "uid://d1o0v45jvklar"
