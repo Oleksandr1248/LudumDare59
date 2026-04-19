@@ -1,13 +1,31 @@
-[gd_resource type="Resource" script_class="DayData" format=3 uid="uid://dx3gdnqlkpbkq"]
+[gd_resource type="Resource" script_class="DayData" format=3 uid="uid://b1x40jpgxt12s"]
 
 [ext_resource type="Script" uid="uid://cu8vyh1oyjwyc" path="res://scripts/resources/day_data.gd" id="1_sutbr"]
 [ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="2_1rr73"]
-[ext_resource type="Resource" uid="uid://cscs4muihku7j" path="res://resources/task_lists/list1.tres" id="3_f3f15"]
-[ext_resource type="Resource" uid="uid://bd763go4e86bh" path="res://resources/task_lists/list2.tres" id="4_c0m3m"]
-[ext_resource type="Resource" uid="uid://c4ken0tdbk6hh" path="res://resources/task_lists/list3.tres" id="5_np075"]
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="3_np075"]
+[ext_resource type="Resource" uid="uid://cjnvisj1d5en3" path="res://resources/itask_data/bonfire/blin.tres" id="4_molor"]
+[ext_resource type="Resource" uid="uid://ynauas8qmql3" path="res://resources/itask_data/bonfire/cube.tres" id="5_q6fg4"]
+[ext_resource type="Resource" uid="uid://cqn6ooo06c3fy" path="res://resources/itask_data/bonfire/krug.tres" id="6_m7a72"]
+[ext_resource type="Resource" uid="uid://c6tislnjugir" path="res://resources/itask_data/bonfire/sword.tres" id="7_iqkhc"]
+[ext_resource type="Resource" uid="uid://ceuw3kv82uofu" path="res://resources/itask_data/bonfire/line.tres" id="8_4yext"]
+[ext_resource type="Resource" uid="uid://bp6khrmsle8ec" path="res://resources/itask_data/bonfire/pes.tres" id="9_c1p30"]
+
+[sub_resource type="Resource" id="Resource_hcnxb"]
+script = ExtResource("2_1rr73")
+array = Array[ExtResource("3_np075")]([ExtResource("4_molor"), ExtResource("5_q6fg4"), ExtResource("6_m7a72"), ExtResource("7_iqkhc")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"
+
+[sub_resource type="Resource" id="Resource_0gckt"]
+script = ExtResource("2_1rr73")
+array = Array[ExtResource("3_np075")]([ExtResource("5_q6fg4"), ExtResource("8_4yext"), ExtResource("5_q6fg4"), ExtResource("4_molor")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"
+
+[sub_resource type="Resource" id="Resource_msg8d"]
+script = ExtResource("2_1rr73")
+array = Array[ExtResource("3_np075")]([ExtResource("5_q6fg4"), ExtResource("9_c1p30"), ExtResource("9_c1p30"), ExtResource("8_4yext"), ExtResource("8_4yext")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"
 
 [resource]
 script = ExtResource("1_sutbr")
-tasks_list = Array[ExtResource("2_1rr73")]([ExtResource("3_f3f15"), ExtResource("4_c0m3m"), ExtResource("5_np075")])
-_on_start = 2
+tasks_list = Array[ExtResource("2_1rr73")]([SubResource("Resource_hcnxb"), SubResource("Resource_0gckt"), SubResource("Resource_msg8d")])
 metadata/_custom_type_script = "uid://cu8vyh1oyjwyc"

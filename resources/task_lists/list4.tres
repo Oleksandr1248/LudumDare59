@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="TaskList" format=3 uid="uid://bw2vhdl2mn5vv"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_falrg"]
+[ext_resource type="Resource" uid="uid://21ljfyrr8flt" path="res://resources/itask_data/color_light/red.tres" id="2_pyjwt"]
+[ext_resource type="Resource" uid="uid://b5u8mssdxdavi" path="res://resources/itask_data/color_light/pink.tres" id="3_cdtss"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="3_h7cd6"]
+[ext_resource type="Resource" uid="uid://irbp8ggjtu26" path="res://resources/itask_data/color_light/purple.tres" id="4_oby70"]
+[ext_resource type="Resource" uid="uid://ny42buh8mmoo" path="res://resources/itask_data/color_light/blue.tres" id="5_of12o"]
+[ext_resource type="Resource" uid="uid://2ne7xec4ewhk" path="res://resources/itask_data/color_light/white.tres" id="6_l61li"]
+
+[resource]
+script = ExtResource("3_h7cd6")
+array = Array[ExtResource("1_falrg")]([ExtResource("2_pyjwt"), ExtResource("2_pyjwt"), ExtResource("3_cdtss"), ExtResource("2_pyjwt"), ExtResource("3_cdtss"), ExtResource("4_oby70"), ExtResource("5_of12o"), ExtResource("6_l61li"), ExtResource("4_oby70"), ExtResource("5_of12o")])
+type = 1
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"

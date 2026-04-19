@@ -2,11 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_hmlvx"]
 [ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="2_oasan"]
-[ext_resource type="Resource" uid="uid://cjnvisj1d5en3" path="res://resources/itask_data/bonfire/blin.tres" id="2_xsge8"]
-[ext_resource type="Resource" uid="uid://ceuw3kv82uofu" path="res://resources/itask_data/bonfire/line.tres" id="3_x0rrp"]
 [ext_resource type="Resource" uid="uid://21ljfyrr8flt" path="res://resources/itask_data/color_light/red.tres" id="4_x0rrp"]
 
 [resource]
 script = ExtResource("2_oasan")
-array = Array[ExtResource("1_hmlvx")]([ExtResource("2_xsge8"), ExtResource("2_xsge8"), ExtResource("3_x0rrp"), ExtResource("4_x0rrp"), ExtResource("2_xsge8")])
+array = Array[ExtResource("1_hmlvx")]([ExtResource("4_x0rrp"), ExtResource("4_x0rrp")])
+type = 1
 metadata/_custom_type_script = "uid://cbt56lb2qh45w"

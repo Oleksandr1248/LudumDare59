@@ -5,8 +5,9 @@
 [ext_resource type="Resource" uid="uid://bp6khrmsle8ec" path="res://resources/itask_data/bonfire/pes.tres" id="2_da0m8"]
 [ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="4_4ce38"]
 [ext_resource type="Resource" uid="uid://c6tislnjugir" path="res://resources/itask_data/bonfire/sword.tres" id="4_ou4u2"]
+[ext_resource type="Resource" uid="uid://ceuw3kv82uofu" path="res://resources/itask_data/bonfire/line.tres" id="5_da0m8"]
 
 [resource]
 script = ExtResource("4_4ce38")
-array = Array[ExtResource("1_lrap2")]([ExtResource("2_da0m8"), ExtResource("2_06orn"), ExtResource("4_ou4u2")])
+array = Array[ExtResource("1_lrap2")]([ExtResource("2_da0m8"), ExtResource("2_06orn"), ExtResource("4_ou4u2"), ExtResource("5_da0m8"), ExtResource("2_da0m8")])
 metadata/_custom_type_script = "uid://cbt56lb2qh45w"

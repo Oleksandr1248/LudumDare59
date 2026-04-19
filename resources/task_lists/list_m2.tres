@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TaskList" format=3 uid="uid://bkhu22u7s6cvr"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_0xakb"]
+[ext_resource type="Resource" uid="uid://c840mdng02y15" path="res://resources/itask_data/color_light/green.tres" id="2_ky5pl"]
+[ext_resource type="Resource" uid="uid://ny42buh8mmoo" path="res://resources/itask_data/color_light/blue.tres" id="2_ub47i"]
+[ext_resource type="Resource" uid="uid://irbp8ggjtu26" path="res://resources/itask_data/color_light/purple.tres" id="3_182bt"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="4_182bt"]
+
+[resource]
+script = ExtResource("4_182bt")
+array = Array[ExtResource("1_0xakb")]([ExtResource("2_ub47i"), ExtResource("3_182bt"), ExtResource("3_182bt"), ExtResource("2_ky5pl")])
+type = 1
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"

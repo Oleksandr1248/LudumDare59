@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaskList" format=3 uid="uid://lrvgla65fqok"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_wvpfu"]
+[ext_resource type="Resource" uid="uid://bp6khrmsle8ec" path="res://resources/itask_data/bonfire/pes.tres" id="2_2bdfl"]
+[ext_resource type="Resource" uid="uid://c6tislnjugir" path="res://resources/itask_data/bonfire/sword.tres" id="3_kexq5"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="4_nupy2"]
+
+[resource]
+script = ExtResource("4_nupy2")
+array = Array[ExtResource("1_wvpfu")]([ExtResource("2_2bdfl"), ExtResource("3_kexq5"), ExtResource("3_kexq5")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"

@@ -10,6 +10,7 @@ signal cleared
 
 var dict: Dictionary[int, Array]
 var is_clearing := true
+var block := false
 
 func _init() -> void:
 	G.color_light = self
@@ -34,13 +35,15 @@ func try_to_start(idx: int) -> void:
 
 func start(array: Array[Color]) -> void:
 	for c in array:
-		color_rect.self_modulate = c
-		interval.start(beam)
-		await interval.timeout
-		color_rect.self_modulate = Color.BLACK
-		interval.start(beam)
-		await interval.timeout
-	SignalBus.task_completed.emit()
+		if not block:
+			color_rect.self_modulate = c
+			interval.start(beam)
+			await interval.timeout
+			color_rect.self_modulate = Color.BLACK
+			interval.start(beam)
+			await interval.timeout
+	if not block:
+		SignalBus.task_completed.emit()
 
 func clear() -> void:
 	dict.clear()

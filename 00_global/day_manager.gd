@@ -2,7 +2,9 @@ extends Node
 
 const list: Array[DayData] = [
 	preload("uid://b4jaho16q8q72"),
-	preload("uid://dx3gdnqlkpbkq")
+	preload("uid://b1x40jpgxt12s"),
+	preload("uid://dx3gdnqlkpbkq"),
+	preload("uid://cwpbl3em0wsoj")
 ]
 
 var idx := 0

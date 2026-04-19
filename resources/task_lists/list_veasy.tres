@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TaskList" format=3 uid="uid://cesro4p1ar5ce"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_yg6gf"]
+[ext_resource type="Resource" uid="uid://ynauas8qmql3" path="res://resources/itask_data/bonfire/cube.tres" id="2_6nlay"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="3_cglof"]
+
+[resource]
+script = ExtResource("3_cglof")
+array = Array[ExtResource("1_yg6gf")]([ExtResource("2_6nlay")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"

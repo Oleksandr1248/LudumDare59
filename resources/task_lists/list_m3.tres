@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TaskList" format=3 uid="uid://bhkhtgftqvu4t"]
+
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="1_f3yee"]
+[ext_resource type="Resource" uid="uid://irbp8ggjtu26" path="res://resources/itask_data/color_light/purple.tres" id="3_pg7qq"]
+[ext_resource type="Resource" uid="uid://c840mdng02y15" path="res://resources/itask_data/color_light/green.tres" id="4_3cx2y"]
+[ext_resource type="Resource" uid="uid://b5u8mssdxdavi" path="res://resources/itask_data/color_light/pink.tres" id="4_n7ch4"]
+[ext_resource type="Resource" uid="uid://21ljfyrr8flt" path="res://resources/itask_data/color_light/red.tres" id="5_kuj15"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="5_nndwl"]
+
+[resource]
+script = ExtResource("5_nndwl")
+array = Array[ExtResource("1_f3yee")]([ExtResource("3_pg7qq"), ExtResource("4_3cx2y"), ExtResource("4_n7ch4"), ExtResource("5_kuj15"), ExtResource("4_3cx2y"), ExtResource("3_pg7qq")])
+type = 1
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"

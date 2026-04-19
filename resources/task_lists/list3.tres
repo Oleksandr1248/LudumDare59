@@ -5,8 +5,10 @@
 [ext_resource type="Resource" uid="uid://cqn6ooo06c3fy" path="res://resources/itask_data/bonfire/krug.tres" id="3_xgnji"]
 [ext_resource type="Resource" uid="uid://ceuw3kv82uofu" path="res://resources/itask_data/bonfire/line.tres" id="3_yw3o5"]
 [ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="4_11uxd"]
+[ext_resource type="Resource" uid="uid://ynauas8qmql3" path="res://resources/itask_data/bonfire/cube.tres" id="5_11uxd"]
+[ext_resource type="Resource" uid="uid://bp6khrmsle8ec" path="res://resources/itask_data/bonfire/pes.tres" id="6_ovov1"]
 
 [resource]
 script = ExtResource("4_11uxd")
-array = Array[ExtResource("1_343oo")]([ExtResource("2_xgnji"), ExtResource("3_xgnji"), ExtResource("3_yw3o5")])
+array = Array[ExtResource("1_343oo")]([ExtResource("2_xgnji"), ExtResource("3_xgnji"), ExtResource("3_yw3o5"), ExtResource("5_11uxd"), ExtResource("6_ovov1"), ExtResource("2_xgnji")])
 metadata/_custom_type_script = "uid://cbt56lb2qh45w"
