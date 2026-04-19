@@ -3,6 +3,5 @@
 [ext_resource type="Script" uid="uid://2bssb57ng5b3" path="res://00_global/task_manager.gd" id="1_qmn04"]
 
 [node name="TaskManager" type="Timer" unique_id=863085988]
-wait_time = 3.0
 one_shot = true
 script = ExtResource("1_qmn04")

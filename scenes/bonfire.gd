@@ -32,6 +32,7 @@ func register(idx: int, array: Array[ITaskData]) -> void:
 	dict[idx] = puffs
 
 func start_tween(c: PuffsSmoke) -> void:
+	print(c)
 	if _tween: _tween.kill()
 	var end_pos_y: int = floor(marker_2d.position.y - c.get_puff_size().y)
 	_tween = create_tween()
@@ -50,9 +51,10 @@ func start_tween(c: PuffsSmoke) -> void:
 func clear() -> void:
 	dict.clear()
 	for ch in get_children():
-		if not (ch is Marker2D):
-			ch.queue_free()
+		if ch is PuffsSmoke:
+				ch.queue_free()
 	#can_delete = true
+	SignalBus.can_start_task.emit()
 
 func try_to_start(idx: int) -> void:
 	if dict.has(idx):
@@ -63,6 +65,7 @@ func try_to_start(idx: int) -> void:
 
 class PuffsSmoke extends Control:
 	var puff_size := Vector2.ZERO
+	var idx := 0
 	
 	func get_puff_size() -> Vector2:
 		var child_count := get_child_count()

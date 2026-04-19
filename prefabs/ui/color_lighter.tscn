@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ht5pw6gpefn8"]
+
+[ext_resource type="Script" uid="uid://do8ex5wpwlyri" path="res://prefabs/ui/color_lighter.gd" id="1_x28ax"]
+
+[sub_resource type="Gradient" id="Gradient_u20vm"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x28ax"]
+gradient = SubResource("Gradient_u20vm")
+
+[node name="ColorLighter" type="TextureRect" unique_id=1481068080]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("GradientTexture2D_x28ax")
+script = ExtResource("1_x28ax")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2142871242]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Interval" type="Timer" parent="." unique_id=1863334398]
+one_shot = true

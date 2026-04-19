@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 G="*uid://bkvmlkwl7fvwk"
 TaskManager="*uid://bpsgus07rhs11"
+DayManager="*uid://bafjap6m4lhoc"
 SignalBus="*uid://tvehekipskxu"
 
 [display]

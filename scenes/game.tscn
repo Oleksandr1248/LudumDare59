@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b088wn6hyb841"]
 
 [ext_resource type="Texture2D" uid="uid://iubnb681qyos" path="res://assets/sprites/BackgroundLD59.png" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://d37wdcyn4h1hp" path="res://scenes/game.gd" id="1_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://3ugwhpw7qkgg" path="res://assets/sprites/WindowLD59.png" id="2_iywne"]
 [ext_resource type="Script" uid="uid://ch3tglt2t4urd" path="res://scenes/bonfire.gd" id="2_rysoc"]
 [ext_resource type="Texture2D" uid="uid://c1t66m2p2gbes" path="res://assets/sprites/ForestLD59.png" id="3_p57ef"]
@@ -9,6 +10,7 @@
 [ext_resource type="Script" uid="uid://dm71k0axlptsb" path="res://scenes/computer.gd" id="5_p57ef"]
 [ext_resource type="PackedScene" uid="uid://clt5ui0thec30" path="res://prefabs/ui/keycap.tscn" id="7_u5sy4"]
 [ext_resource type="Resource" uid="uid://dmbqcciitcbmy" path="res://resources/ikey_data/key1.tres" id="8_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ht5pw6gpefn8" path="res://prefabs/ui/color_lighter.tscn" id="9_264po"]
 [ext_resource type="Resource" uid="uid://bx7inr1leik0l" path="res://resources/ikey_data/backspace.tres" id="9_kvpfn"]
 [ext_resource type="Resource" uid="uid://odtfnftohhxq" path="res://resources/ikey_data/key2.tres" id="9_trtic"]
 [ext_resource type="Resource" uid="uid://cnrkfml8a7bhu" path="res://resources/ikey_data/enter.tres" id="9_vtaks"]
@@ -19,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dvxksfexk8yce" path="res://00_global/decoder_manager.tscn" id="16_ca42v"]
 
 [node name="Game" type="Node2D" unique_id=1823882586]
+script = ExtResource("1_ssvqc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=179034675]
 
@@ -134,6 +137,12 @@ layout_mode = 2
 [node name="ComputerSlot12" parent="CanvasLayer/Computer/GridContainer" unique_id=1773189282 instance=ExtResource("5_iywne")]
 layout_mode = 2
 
+[node name="ColorLighter" parent="CanvasLayer" unique_id=1481068080 instance=ExtResource("9_264po")]
+offset_left = 113.0
+offset_top = 27.0
+offset_right = 177.0
+offset_bottom = 91.0
+
 [node name="KeyBoard" type="PanelContainer" parent="CanvasLayer" unique_id=1013224121]
 offset_left = 24.0
 offset_top = 277.0
@@ -186,3 +195,22 @@ data = ExtResource("9_vtaks")
 [node name="DecoderManager" parent="CanvasLayer" unique_id=1605859233 instance=ExtResource("16_ca42v")]
 offset_top = 360.0
 offset_bottom = 360.0
+
+[node name="DayPanel" type="PanelContainer" parent="CanvasLayer" unique_id=1001344976]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -360.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextLabel" type="Label" parent="CanvasLayer/DayPanel" unique_id=363696218]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 40
+text = "DAY 1"
+horizontal_alignment = 1
+vertical_alignment = 1
