@@ -19,6 +19,22 @@
 [ext_resource type="Resource" uid="uid://d13qfhgheahet" path="res://resources/ikey_data/key5.tres" id="12_ir15t"]
 [ext_resource type="Resource" uid="uid://dprynduar5sj7" path="res://resources/ikey_data/key6.tres" id="12_rysoc"]
 [ext_resource type="PackedScene" uid="uid://dvxksfexk8yce" path="res://00_global/decoder_manager.tscn" id="16_ca42v"]
+[ext_resource type="AudioStream" uid="uid://djlqoqts7m5jk" path="res://assets/sounds/complete.mp3" id="20_5newe"]
+[ext_resource type="Texture2D" uid="uid://d4a5wf52sm0wb" path="res://assets/sprites/unmute.png" id="20_bt5mj"]
+[ext_resource type="AudioStream" uid="uid://cmr0raddypmk3" path="res://assets/sounds/error.mp3" id="21_37s47"]
+[ext_resource type="Texture2D" uid="uid://bwnvxsmxu18sk" path="res://assets/sprites/mute.png" id="21_e1j6l"]
+
+[sub_resource type="Gradient" id="Gradient_5newe"]
+offsets = PackedFloat32Array(0.82071716, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_37s47"]
+gradient = SubResource("Gradient_5newe")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bt5mj"]
+texture = SubResource("GradientTexture2D_37s47")
 
 [node name="Game" type="Node2D" unique_id=1823882586]
 script = ExtResource("1_ssvqc")
@@ -142,10 +158,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ColorLighter" parent="CanvasLayer" unique_id=1481068080 instance=ExtResource("9_264po")]
-offset_left = 477.0
-offset_top = 146.0
-offset_right = 525.0
-offset_bottom = 218.0
+offset_left = 469.0
+offset_top = 145.0
+offset_right = 517.0
+offset_bottom = 217.0
 scale = Vector2(2, 2)
 
 [node name="KeyBoard" type="PanelContainer" parent="CanvasLayer" unique_id=1013224121]
@@ -221,3 +237,39 @@ theme_override_font_sizes/font_size = 40
 text = "DAY 1"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Vinet" type="Panel" parent="CanvasLayer" unique_id=1782450946]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bt5mj")
+
+[node name="VinetTimer" type="Timer" parent="CanvasLayer/Vinet" unique_id=286909763]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[node name="MuteButton" type="TextureButton" parent="CanvasLayer" unique_id=1195003407]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("20_bt5mj")
+texture_pressed = ExtResource("21_e1j6l")
+
+[node name="AudioComplete" type="AudioStreamPlayer" parent="." unique_id=1847880996]
+stream = ExtResource("20_5newe")
+
+[node name="AudioError" type="AudioStreamPlayer" parent="." unique_id=1905746901]
+stream = ExtResource("21_37s47")

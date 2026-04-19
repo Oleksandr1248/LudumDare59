@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://6d4icoapej4x" path="res://assets/sprites/button/h0.png" id="10_g58wx"]
 [ext_resource type="Texture2D" uid="uid://cydwwuhisribk" path="res://assets/sprites/button/h1.png" id="11_nkpa5"]
 [ext_resource type="Texture2D" uid="uid://vrcjm1twm6hu" path="res://assets/sprites/button/h2.png" id="12_rsue1"]
+[ext_resource type="AudioStream" uid="uid://bkwetwlyd4cxv" path="res://assets/sounds/button_hover.mp3" id="13_yp7p7"]
+[ext_resource type="AudioStream" uid="uid://c8ktsq0w8b5bf" path="res://assets/sounds/button_click.mp3" id="14_g58wx"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g16h"]
 texture = ExtResource("3_imw87")
@@ -116,3 +118,9 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_br5iu")
 theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_br5iu")
 toggle_mode = true
 text = "Toggle"
+
+[node name="AudioHover" type="AudioStreamPlayer" parent="." unique_id=914485470]
+stream = ExtResource("13_yp7p7")
+
+[node name="AudioClick" type="AudioStreamPlayer" parent="." unique_id=271672861]
+stream = ExtResource("14_g58wx")

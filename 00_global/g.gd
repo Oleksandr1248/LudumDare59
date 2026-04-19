@@ -27,11 +27,13 @@ func computer_enter() -> void:
 	if game_over and not day_is_started: return
 	var input := computer.slots_data
 	if decoder_manager.compare(input):
-		print("COMPLETE")
+		#print("COMPLETE")
+		game.complete()
 		computer.clear()
 		SignalBus.task_list_complete.emit()
 	else:
-		print("ERROR")
+		#print("ERROR")
+		game.error()
 
 func remove_slot() -> void:
 	computer.hide_slot()
@@ -41,4 +43,8 @@ func add_slot(data: SlotData) -> void:
 
 func _on_game_overed() -> void:
 	game_over = true
-	print("YOU WIN")
+	#print("YOU WIN")
+
+func mute(toggled: bool) -> void:
+	var v := .0 if toggled else 1.0
+	AudioServer.set_bus_volume_linear(0, v)

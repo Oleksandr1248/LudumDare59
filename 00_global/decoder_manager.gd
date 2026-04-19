@@ -13,6 +13,8 @@ const END_POS := 0
 @onready var bonfire_grid: GridContainer = %BonfireGrid
 @onready var color_light_grid: GridContainer = %ColorLightGrid
 @onready var toggle_button: Button = %ToggleButton
+@onready var audio_hover: AudioStreamPlayer = $AudioHover
+@onready var audio_click: AudioStreamPlayer = $AudioClick
 var decoded: Array[SlotData]
 var _tween: Tween
 var showed := false
@@ -24,7 +26,9 @@ func _ready() -> void:
 	toggle_button.toggled.connect(func(toggled: bool) -> void:
 		bonfire_grid.visible = not toggled
 		color_light_grid.visible = toggled
+		audio_click.play()
 	)
+	toggle_button.mouse_entered.connect(audio_hover.play)
 	grids_setup()
 
 func grids_setup() -> void:

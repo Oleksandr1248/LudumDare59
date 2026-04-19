@@ -3,6 +3,11 @@ class_name Game
 
 @onready var text_label: Label = %TextLabel
 @onready var day_panel: PanelContainer = %DayPanel
+@onready var audio_complete: AudioStreamPlayer = $AudioComplete
+@onready var audio_error: AudioStreamPlayer = $AudioError
+@onready var vinet: Panel = %Vinet
+@onready var vinet_timer: Timer = %VinetTimer
+@onready var mute_button: TextureButton = %MuteButton
 
 var _tween: Tween
 
@@ -15,6 +20,7 @@ func _ready() -> void:
 		day_panel.position.y = 0
 		text_label.text = "GAME ENDED"
 		text_label.add_theme_color_override("font_color", Color(0.918, 0.618, 0.0, 1.0)))
+	mute_button.toggled.connect(G.mute)
 
 func tween_panel() -> void:
 	text_label.text = "DAY %d" % (DayManager.idx + 1)
@@ -24,3 +30,18 @@ func tween_panel() -> void:
 	await get_tree().create_timer(.4).timeout
 	_tween = create_tween()
 	_tween.tween_property(day_panel, "position:y", -360, .4)
+
+func complete() -> void:
+	audio_complete.play()
+	vinet_bleam(Color.LAWN_GREEN)
+
+func error() -> void:
+	audio_error.play()
+	vinet_bleam(Color.DARK_RED)
+
+func vinet_bleam(c: Color) -> void:
+	vinet.show()
+	vinet.self_modulate = c
+	vinet_timer.start(.2)
+	await vinet_timer.timeout
+	vinet.hide()
