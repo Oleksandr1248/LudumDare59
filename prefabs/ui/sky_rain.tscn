@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dtvi2h12x6pyc"]
+
+[ext_resource type="Texture2D" uid="uid://bx83gqpshlmnr" path="res://assets/sprites/sky_rain.png" id="1_14li3"]
+[ext_resource type="Script" uid="uid://bkplqk15bwnuy" path="res://prefabs/ui/sky_rain.gd" id="2_58xq7"]
+
+[node name="SkyRain" type="TextureRect" unique_id=609495795]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_14li3")
+script = ExtResource("2_58xq7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1866804740]
+position = Vector2(170, 80)
+emitting = false
+amount = 120
+lifetime = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(100, 80)
+scale_amount_max = 2.0
+color = Color(0, 0.68098164, 0.85898197, 1)

@@ -4,7 +4,9 @@
 [ext_resource type="Script" uid="uid://d37wdcyn4h1hp" path="res://scenes/game.gd" id="1_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://3ugwhpw7qkgg" path="res://assets/sprites/WindowLD59.png" id="2_iywne"]
 [ext_resource type="Script" uid="uid://ch3tglt2t4urd" path="res://scenes/bonfire.gd" id="2_rysoc"]
+[ext_resource type="Texture2D" uid="uid://bd8w51lorjvf3" path="res://assets/sprites/sky_sun.png" id="3_e1j6l"]
 [ext_resource type="Texture2D" uid="uid://c1t66m2p2gbes" path="res://assets/sprites/ForestLD59.png" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://dtvi2h12x6pyc" path="res://prefabs/ui/sky_rain.tscn" id="4_pl11u"]
 [ext_resource type="Texture2D" uid="uid://b1l6alwbmplny" path="res://assets/sprites/ComputerLD59.png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dxuupx85b7qad" path="res://prefabs/ui/computer_slot.tscn" id="5_iywne"]
 [ext_resource type="Script" uid="uid://dm71k0axlptsb" path="res://scenes/computer.gd" id="5_p57ef"]
@@ -23,6 +25,8 @@
 [ext_resource type="Texture2D" uid="uid://d4a5wf52sm0wb" path="res://assets/sprites/unmute.png" id="20_bt5mj"]
 [ext_resource type="AudioStream" uid="uid://cmr0raddypmk3" path="res://assets/sounds/error.mp3" id="21_37s47"]
 [ext_resource type="Texture2D" uid="uid://bwnvxsmxu18sk" path="res://assets/sprites/mute.png" id="21_e1j6l"]
+[ext_resource type="AudioStream" uid="uid://55rqh427djpt" path="res://assets/sounds/forest.mp3" id="26_qnb83"]
+[ext_resource type="AudioStream" uid="uid://blw3eafk4vytk" path="res://assets/sounds/rain.mp3" id="27_sww3w"]
 
 [sub_resource type="Gradient" id="Gradient_5newe"]
 offsets = PackedFloat32Array(0.82071716, 1)
@@ -55,6 +59,21 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_iywne")
 stretch_mode = 3
+
+[node name="SkySun" type="TextureRect" parent="CanvasLayer/Window" unique_id=824906362]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_e1j6l")
+
+[node name="SkyRain" parent="CanvasLayer/Window" unique_id=609495795 instance=ExtResource("4_pl11u")]
+visible = false
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 184.0
 
 [node name="Bonfire" type="Control" parent="CanvasLayer/Window" unique_id=1848055457]
 anchors_preset = 0
@@ -158,6 +177,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ColorLighter" parent="CanvasLayer" unique_id=1481068080 instance=ExtResource("9_264po")]
+visible = false
 offset_left = 469.0
 offset_top = 145.0
 offset_right = 517.0
@@ -273,3 +293,12 @@ stream = ExtResource("20_5newe")
 
 [node name="AudioError" type="AudioStreamPlayer" parent="." unique_id=1905746901]
 stream = ExtResource("21_37s47")
+
+[node name="AudioForest" type="AudioStreamPlayer" parent="." unique_id=931381833]
+stream = ExtResource("26_qnb83")
+volume_db = -8.0
+autoplay = true
+
+[node name="AudioRain" type="AudioStreamPlayer" parent="." unique_id=1598895831]
+stream = ExtResource("27_sww3w")
+volume_db = -8.0

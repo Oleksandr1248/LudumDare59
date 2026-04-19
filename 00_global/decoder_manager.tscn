@@ -102,6 +102,7 @@ columns = 2
 
 [node name="ToggleButton" type="Button" parent="." unique_id=1282946248]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(100, 40)
 layout_mode = 0
 offset_left = 329.0

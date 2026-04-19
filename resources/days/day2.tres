@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DayData" format=3 uid="uid://dx3gdnqlkpbkq"]
+
+[ext_resource type="Script" uid="uid://cu8vyh1oyjwyc" path="res://scripts/resources/day_data.gd" id="1_sutbr"]
+[ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="2_1rr73"]
+[ext_resource type="Resource" uid="uid://cscs4muihku7j" path="res://resources/task_lists/list1.tres" id="3_f3f15"]
+[ext_resource type="Resource" uid="uid://bd763go4e86bh" path="res://resources/task_lists/list2.tres" id="4_c0m3m"]
+[ext_resource type="Resource" uid="uid://c4ken0tdbk6hh" path="res://resources/task_lists/list3.tres" id="5_np075"]
+
+[resource]
+script = ExtResource("1_sutbr")
+tasks_list = Array[ExtResource("2_1rr73")]([ExtResource("3_f3f15"), ExtResource("4_c0m3m"), ExtResource("5_np075")])
+_on_start = 2
+metadata/_custom_type_script = "uid://cu8vyh1oyjwyc"

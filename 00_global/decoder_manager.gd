@@ -23,6 +23,7 @@ func _init() -> void:
 	G.decoder_manager = self
 
 func _ready() -> void:
+	SignalBus.color_lighter_added.connect(toggle_button.show)
 	toggle_button.toggled.connect(func(toggled: bool) -> void:
 		bonfire_grid.visible = not toggled
 		color_light_grid.visible = toggled

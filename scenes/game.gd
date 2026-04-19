@@ -8,6 +8,8 @@ class_name Game
 @onready var vinet: Panel = %Vinet
 @onready var vinet_timer: Timer = %VinetTimer
 @onready var mute_button: TextureButton = %MuteButton
+@onready var audio_forest: AudioStreamPlayer = $AudioForest
+@onready var audio_rain: AudioStreamPlayer = $AudioRain
 
 var _tween: Tween
 
@@ -20,6 +22,8 @@ func _ready() -> void:
 		day_panel.position.y = 0
 		text_label.text = "GAME ENDED"
 		text_label.add_theme_color_override("font_color", Color(0.918, 0.618, 0.0, 1.0)))
+	SignalBus.rain_started.connect(rain_toggled.bind(true))
+	SignalBus.rain_ended.connect(rain_toggled.bind(false))
 	mute_button.toggled.connect(G.mute)
 
 func tween_panel() -> void:
@@ -45,3 +49,11 @@ func vinet_bleam(c: Color) -> void:
 	vinet_timer.start(.2)
 	await vinet_timer.timeout
 	vinet.hide()
+
+func rain_toggled(toggle: bool) -> void:
+	if toggle:
+		audio_rain.play()
+		audio_forest.stop()
+	else:
+		audio_rain.stop()
+		audio_forest.play()

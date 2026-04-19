@@ -34,11 +34,12 @@ func start_tween(c: PuffsSmoke) -> void:
 	_tween = create_tween()
 	_tween.tween_property(c, "position:y", end_pos_y, 5)
 	await _tween.finished
-	SignalBus.task_completed.emit()
 	if c:
 		c.position.y = 0
+	SignalBus.task_completed.emit()
 
 func clear() -> void:
+	if _tween: _tween.kill()
 	dict.clear()
 	for ch in get_children():
 		if ch is PuffsSmoke:

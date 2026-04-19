@@ -8,6 +8,7 @@ func _ready() -> void:
 	SignalBus.can_start_task.connect(func () -> void: can_start = true)
 
 func set_task_list(tl: TaskList) -> void:
+	G.color_light.clear()
 	if not can_start:
 		await SignalBus.can_start_task
 	var array := tl.array
@@ -29,7 +30,10 @@ func set_task_list(tl: TaskList) -> void:
 	start_task()
 
 func start_task() -> void:
+	print(G.bonfire.dict)
+	print(G.color_light.dict)
 	for i in range(max_idx):
+		await get_tree().create_timer(.1).timeout
 		SignalBus.task_started.emit(i)
 		await SignalBus.task_completed
 	start(3)

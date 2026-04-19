@@ -2,11 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cu8vyh1oyjwyc" path="res://scripts/resources/day_data.gd" id="1_pkvef"]
 [ext_resource type="Script" uid="uid://cbt56lb2qh45w" path="res://scripts/resources/task_list.gd" id="2_b5d11"]
-[ext_resource type="Resource" uid="uid://cscs4muihku7j" path="res://resources/task_lists/list1.tres" id="3_qwh3c"]
-[ext_resource type="Resource" uid="uid://bd763go4e86bh" path="res://resources/task_lists/list2.tres" id="4_jx46c"]
-[ext_resource type="Resource" uid="uid://c4ken0tdbk6hh" path="res://resources/task_lists/list3.tres" id="5_io1n4"]
+[ext_resource type="Script" uid="uid://c0yoeli6qfwnj" path="res://scripts/resources/itask_data/itask_data.gd" id="3_b34we"]
+[ext_resource type="Resource" uid="uid://cjnvisj1d5en3" path="res://resources/itask_data/bonfire/blin.tres" id="4_qwh3c"]
+
+[sub_resource type="Resource" id="Resource_jx46c"]
+script = ExtResource("2_b5d11")
+array = Array[ExtResource("3_b34we")]([ExtResource("4_qwh3c"), ExtResource("4_qwh3c")])
+metadata/_custom_type_script = "uid://cbt56lb2qh45w"
 
 [resource]
 script = ExtResource("1_pkvef")
-tasks_list = Array[ExtResource("2_b5d11")]([ExtResource("3_qwh3c"), ExtResource("4_jx46c"), ExtResource("5_io1n4")])
+tasks_list = Array[ExtResource("2_b5d11")]([SubResource("Resource_jx46c")])
 metadata/_custom_type_script = "uid://cu8vyh1oyjwyc"
