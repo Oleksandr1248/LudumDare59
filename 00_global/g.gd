@@ -2,9 +2,6 @@ extends Node
 
 const DAY_1 = preload("uid://b4jaho16q8q72")
 
-signal day_started
-signal tasks_compited
-
 var decoder_manager: DecoderManager
 var computer: Computer
 var bonfire: BonfireNode
@@ -12,8 +9,10 @@ var game_over := false
 var day_is_started := false
 
 func _ready() -> void:
-	day_started.connect(func (): day_is_started = true)
-	day_started.emit()
+	SignalBus.day_started.connect(func (): day_is_started = true)
+	if not bonfire.is_node_ready():
+		await bonfire.ready
+	SignalBus.day_started.emit()
 	next_task_list()
 
 func _input(event: InputEvent) -> void:
@@ -29,7 +28,7 @@ func computer_enter() -> void:
 	if decoder_manager.compare(input):
 		print("COMPLETE")
 		computer.clear()
-		tasks_compited.emit()
+		SignalBus.task_list_complete.emit()
 		next_task_list()
 	else:
 		print("ERROR")
@@ -38,6 +37,7 @@ func next_task_list() -> void:
 	var task_list := DAY_1.next_task_list()
 	if task_list:
 		decoder_manager.decode(task_list)
+		TaskManager.set_task_list(task_list)
 	else:
 		game_over = true
 		print("YOU WIN")

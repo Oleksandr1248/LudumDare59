@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 G="*uid://bkvmlkwl7fvwk"
+TaskManager="*uid://bpsgus07rhs11"
+SignalBus="*uid://tvehekipskxu"
 
 [display]
 

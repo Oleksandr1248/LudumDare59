@@ -45,12 +45,8 @@ offset_right = 159.0
 offset_bottom = 173.0
 script = ExtResource("2_rysoc")
 
-[node name="Timer" type="Timer" parent="CanvasLayer/Window/Bonfire" unique_id=1082030730]
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Window/Bonfire" unique_id=427107951]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Marker2D" type="Marker2D" parent="CanvasLayer/Window/Bonfire" unique_id=2092326805]
+position = Vector2(0, -179)
 
 [node name="Forest" type="TextureRect" parent="CanvasLayer/Window" unique_id=1857092549]
 layout_mode = 1
