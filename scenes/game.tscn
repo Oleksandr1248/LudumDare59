@@ -30,8 +30,8 @@
 [ext_resource type="AudioStream" uid="uid://blw3eafk4vytk" path="res://assets/sounds/rain.mp3" id="27_sww3w"]
 
 [sub_resource type="Gradient" id="Gradient_5newe"]
-offsets = PackedFloat32Array(0.82071716, 1)
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0.7109634, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.5411765)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_37s47"]
 gradient = SubResource("Gradient_5newe")
